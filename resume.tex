@@ -1,23 +1,26 @@
-%% start of file `template.tex'.
-%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com), 2020-2022 moderncv maintainers (github.com/moderncv).
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
+% possible options include font size ('10pt', '11pt' and '12pt'), 
+% paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape')
+% and font family ('sans' and 'roman')
+\documentclass[11pt,a4paper,sans]{moderncv}
 
-\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
-
-% moderncv themes
-\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
-\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
-%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+% style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvstyle{classic}
+% color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+\moderncvcolor{blue}
+% to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+% \renewcommand{\familydefault}{\sfdefault}
+% uncomment to suppress automatic page numbering for CVs longer than one page
+% \nopagenumbers{}
 
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
-\setlength{\footskip}{136.00005pt}                 % depending on the amount of information in the footer, you need to change this value. comment this line out and set it to the size given in the warning
-%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
-%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+% depending on the amount of information in the footer, you need to change this value.
+% comment this line out and set it to the size given in the warning
+\setlength{\footskip}{136.00005pt}
+% if you want to change the width of the column with the dates
+% \setlength{\hintscolumnwidth}{3cm}
+% for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+% \setlength{\makecvheadnamewidth}{10cm}
 
 % font loading
 % for luatex and xetex, do not use inputenc and fontenc
@@ -36,65 +39,72 @@
 \fi
 
 % document language
-\usepackage[english]{babel}  % FIXME: using spanish breaks moderncv
+% FIXME: using spanish breaks moderncv
+\usepackage[english]{babel}
 
 % personal data
 \name{John}{Doe}
-\title{Curriculum Vitæ}                               % optional, remove / comment the line if not wanted
-\born{4 July 1776}                                 % optional, remove / comment the line if not wanted
-\address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
-\phone[mobile]{+1~(234)~567~890}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+\title{Curriculum Vitæ}
+\born{4 July 1776}
+% the "postcode city" and "country" arguments can be omitted or provided empty
+\address{street and number}{postcode city}{country}
+% the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+\phone[mobile]{+1~(234)~567~890}
 \phone[fixed]{+2~(345)~678~901}
 \phone[fax]{+3~(456)~789~012}
-\email{john@doe.org}                               % optional, remove / comment the line if not wanted
-\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+\email{john@doe.org}
+\homepage{www.johndoe.com}
 
 % Social icons
-\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
-\social[xing]{john\_doe}                           % optional, remove / comment the line if not wanted
-\social[twitter]{ji\_doe}                             % optional, remove / comment the line if not wanted
-\social[github]{jdoe}                              % optional, remove / comment the line if not wanted
-\social[gitlab]{jdoe}                              % optional, remove / comment the line if not wanted
-% \social[stackoverflow]{0000000/johndoe}            % optional, remove / comment the line if not wanted
-% \social[bitbucket]{jdoe}                           % optional, remove / comment the line if not wanted
-% \social[skype]{jdoe}                               % optional, remove / comment the line if not wanted
-% \social[orcid]{0000-0000-000-000}                  % optional, remove / comment the line if not wanted
-% \social[researchgate]{jdoe}                        % optional, remove / comment the line if not wanted
-% \social[researcherid]{jdoe}                        % optional, remove / comment the line if not wanted
-% \social[telegram]{jdoe}                            % optional, remove / comment the line if not wanted
-% \social[whatsapp]{12345678901}                     % optional, remove / comment the line if not wanted
-% \social[signal]{12345678901}                       % optional, remove / comment the line if not wanted
-% \social[matrix]{@johndoe:matrix.org}               % optional, remove / comment the line if not wanted
-% \social[googlescholar]{googlescholarid}            % optional, remove / comment the line if not wanted
+\social[linkedin]{john.doe}
+\social[xing]{john\_doe}
+\social[twitter]{ji\_doe}
+\social[github]{jdoe}
+\social[gitlab]{jdoe}
+% \social[stackoverflow]{0000000/johndoe}
+% \social[bitbucket]{jdoe}
+% \social[skype]{jdoe}
+% \social[orcid]{0000-0000-000-000}
+% \social[researchgate]{jdoe}
+% \social[researcherid]{jdoe}
+% \social[telegram]{jdoe}
+% \social[whatsapp]{12345678901}
+% \social[signal]{12345678901}
+% \social[matrix]{@johndoe:matrix.org}
+% \social[googlescholar]{googlescholarid}
 
 
-\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
-\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+\extrainfo{additional information}
+% '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it 
+% (put it to 0pt for no frame) and 'picture' is the name of the image file
+\photo[64pt][0.4pt]{picture}
+\quote{Some quote}
 
 % bibliography adjustments (only useful if you make citations in your resume, or print a list of publications using BibTeX)
-%   to show numerical labels in the bibliography (default is to show no labels)
-%\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+% to show numerical labels in the bibliography (default is to show no labels)
+% \makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
 \renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
-%   to redefine the bibliography heading string ("Publications")
-%\renewcommand{\refname}{Articles}
+% to redefine the bibliography heading string ("Publications")
+% \renewcommand{\refname}{Articles}
 
 % bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
-%----------------------------------------------------------------------------------
-%            content
-%----------------------------------------------------------------------------------
+% \usepackage{multibib}
+% \newcites{book,misc}{{Books},{Others}}
+
+
 \begin{document}
-%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+
+% to typeset your resume in Chinese using CJK
+%\begin{CJK*}{UTF8}{gbsn}
 
 \include{cover_letter}
 
-%-----       resume       ---------------------------------------------------------
+% CV begins here...
 \makecvtitle
 
 \section{Education}
-\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
+% arguments 3 to 6 can be left empty
+\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
 \cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
 
 \section{Master thesis}
@@ -109,16 +119,16 @@ Detailed achievements:
 \begin{itemize}
 \item Achievement 1
 \item Achievement 2 (with sub-achievements)
-  \begin{itemize}
+\begin{itemize}
   \item Sub-achievement (a);
   \item Sub-achievement (b), with sub-sub-achievements (don't do this!);
-    \begin{itemize}
-    \item Sub-sub-achievement i;
-    \item Sub-sub-achievement ii;
-    \item Sub-sub-achievement iii;
-    \end{itemize}
+\begin{itemize}
+  \item Sub-sub-achievement i;
+  \item Sub-sub-achievement ii;
+  \item Sub-sub-achievement iii;
+\end{itemize}
   \item Sub-achievement (c);
-  \end{itemize}
+\end{itemize}
 \item Achievement 3
 \item Achievement 4
 \end{itemize}}
@@ -176,7 +186,8 @@ Detailed achievements:
 
 %% Add a head of the skill matrix table with descriptions.
 %% Usage \cvskillhead[<post_padding>][<Level>][<Skill>][<Years>][<Comment>]%
-\cvskillhead[-0.1em]%   this inserts the standard legend in english and adjust padding
+% this inserts the standard legend in english and adjust padding
+\cvskillhead[-0.1em]
 %% Adjust head of the skill matrix for other languages
 % \cvskillhead[0.25em][Level][F\"ahigkeit][Jahre][Bemerkung]
 
@@ -185,7 +196,8 @@ Detailed achievements:
 \cvskillentry*{Language:}{3}{Python}{2}{I'm so experienced in Python and have realised a million projects. At least.}
 \cvskillentry{}{2}{Lilypond}{14}{So much sheet music! Man, I'm the best!}
 \cvskillentry{}{3}{\LaTeX}{14}{Clearly I rock at \LaTeX}
-\cvskillentry*{OS:}{3}{Linux}{2}{I only use Archlinux btw}% notice the use of the starred command and the optional 
+% notice the use of the starred command and the optional
+\cvskillentry*{OS:}{3}{Linux}{2}{I only use Archlinux btw}
 \cvskillentry*[1em]{Methods}{4}{SCRUM}{8}{SCRUM master for 5 years}
 %% \cvskill{<0-5>} command
 % \cvitem{\textbackslash{cvskill}:}{Skills can be visually expressed by the \textbackslash{cvskill} command, e.g. \cvskill{2}}
@@ -217,18 +229,24 @@ Detailed achievements:
 %  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
 % \nocite{*}
 % \bibliographystyle{plain}
-% \bibliography{publications}                        % 'publications' is the name of a BibTeX file
+% 'publications' is the name of a BibTeX file
+% \bibliography{publications}
 
 % Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+% \section{Publications}
+% \nocitebook{book1,book2}
+% \bibliographystylebook{plain}
+% 'publications' is the name of a BibTeX file
+% \bibliographybook{publications}
+% \nocitemisc{misc1,misc2,misc3}
+% \bibliographystylemisc{plain}
+% 'publications' is the name of a BibTeX file
+% \bibliographymisc{publications}
 
 \clearpage
 
-%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+% if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly
+% with CJK, though it kills the page numbering by making \lastpage undefined
+% \end{CJK*}
+
 \end{document}
