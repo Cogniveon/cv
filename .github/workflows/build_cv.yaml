@@ -1,0 +1,24 @@
+name: Build CV
+
+on:
+  push:
+    branches: [ main ]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Compile LaTeX document
+      uses: xu-cheng/latex-action@v2
+      with:
+        root_file: resume.tex
+
+    - name: Upload Resume PDF
+      uses: actions/upload-artifact@v2
+      with:
+        name: R-Krishnan-CV-${{ github.run_id }}-${{ github.run_number }}.pdf
+        path: resume.pdf
