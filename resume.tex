@@ -45,12 +45,12 @@
 % personal data
 \name{Rohit}{Krishnan}
 \title{Curriculum Vitæ}
-\born{17 October 2000}
+% \born{17 October 2000}
 % the "postcode city" and "country" arguments can be omitted or provided empty
 % \address{street and number}{postcode city}{country}
 % the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 \phone[mobile]{+44 7874 368066}
-\phone[mobile]{+91 6238 324146}
+% \phone[mobile]{+91 6238 324146}
 \email{rohit.k.kesavan@gmail.com}
 \homepage{rohitkrishnan-com.vercel.app}
 
@@ -92,7 +92,7 @@
 \input{glyphtounicode}
 \pdfgentounicode=1
 % to typeset your resume in Chinese using CJK
-%\begin{CJK*}{UTF8}{gbsn}
+% \begin{CJK*}{UTF8}{gbsn}
 
 % \include{cover_letter}
 
@@ -101,27 +101,42 @@
 
 \section{Profile}
 
-I am a passionate software engineer who loves to throw himself at challenging problems and find results. I enjoy
+I am a dedicated software engineer who loves to throw himself at challenging problems and find results. I am currently
+a full time student, studying MSc Artificial Intelligence at the University of Surrey. I enjoy
 building software as a team and I am always looking for ways to improve my skills. Being extremely quick to grasp new
 concepts and understand how new technologies work, I often perform the most when required to explore and develop
 new features for projects I work on.
 
+
 \section{Education}
 % arguments 3 to 6 can be left empty
 \cventry{2023--Present}{MSc Artificial Intelligence}{University of Surrey}{Guildford}{}{
-  Pursuing an MSc in Artificial Intelligence, specializing in cutting-edge topics such as Computer Vision,
-  Deep Learning, and Natural Language Processing. The course is helping me develop a robust understanding of
-  machine learning fundamentals and ethical considerations in AI applications.
+\begin{itemize}
+  \item Specialization in:
+        \begin{itemize}
+          \item Computer Vision
+          \item Deep Learning
+          \item Natural Language Processing
+        \end{itemize}
+  \item Importance of ethical considerations in AI applications.
+  \item Gaining a robust understanding of machine learning fundamentals.
+\end{itemize}
 }
 \cventry{2018--2022}{B.Tech Computer Science}{Neusoft Institute of Technology}{Guangdong}{\textit{3.94/5}}{}
 
 \section{Experience}
 \cventry{Oct 2023 -- Present}{Part-Time Research Assistant}{University of Cambridge}{Remote}{}{
-  Continuing my role at the University of Cambridge, I contribute to innovative projects in digital manufacturing
-  and infrastructure digital twins. Proficient in deploying modularized components using Docker and Python, and
-  previously played a pivotal role in implementing sample tracking solutions for a histopathology lab, incorporating
-  computer vision and machine learning. Adept at combining theoretical knowledge with hands-on experience to drive
-  impactful research outcomes.
+\begin{itemize}
+  \item Presently, continuing role at the University of Cambridge.
+  \item Contributing to innovative projects in Digital Manufacturing \& Infrastructure Digital Twins
+  \item Demonstrated proficiency in deploying modularized components using Docker and Python
+  \item Key accomplishments:
+        \begin{itemize}
+          \item Implemented sample tracking solutions with visualizations for a histopathology lab
+          \item Incorporated computer vision and machine learning in above mentioned projects
+        \end{itemize}
+  \item Demonstrated ability to combine theoretical knowledge with hands-on experience.
+\end{itemize}
   % General description no longer than 1--2 lines.\newline{}
   % Detailed achievements:
   % \begin{itemize}
@@ -153,20 +168,6 @@ new features for projects I work on.
 
 \newpage{}
 
-\section{Honor and Awards}
-
-\cvitem{2022}{
-  Excellent Graduate Award\newline{}
-  Awarded for my academic and athletics performance during my bachelors.
-}
-\cvitem{2018}{12th Grade Topper in Computer \(98\%\)}
-\cvitem{2017}{
-  I was voted as the School Agni House Captain\newline{}
-  Played a major role in orchestrating team activities and fostering a
-  competitive and collaborative environment among students.
-}
-\cvitem{2016}{10th Grade Topper in Computer \(99\%\) and French}
-
 \section{Projects}
 \cvitem{Title}{\textbf{Knife classification in real-world images}}
 \cvitem{Supervisors}{Prof. Xiatian Zhu}
@@ -191,14 +192,25 @@ new features for projects I work on.
   sample management.
 }
 
-\section{Languages}
-\cvitem{English}{Native or Bilingual proficiency}
-\cvitem{Hindi}{Native or Bilingual proficiency}
-\cvitem{Malayalam}{Native or Bilingual proficiency}
-\cvitem{Chinese}{Limited working proficiency}
-\cvitem{Japanese}{Limited working proficiency}
+\section{Honor and Awards}
 
-\section{Computer skills}
+\cvitem{2022}{
+  Excellent Graduate Award for academic and athletics performance during my bachelors.
+}
+\cvitem{2018}{12th Grade Topper in Computer \(98\%\)}
+\cvitem{2017}{
+  Voted as the School Agni House Captain. Played a major role in orchestrating team activities and fostering a
+  competitive and collaborative environment among students.
+}
+\cvitem{2016}{10th Grade Topper in Computer \(99\%\) and French}
+
+\section{Languages}
+\cvdoubleitem{English:}{Native or Bilingual proficiency}{Hindi:}{Native or Bilingual proficiency}
+\cvdoubleitem{Malayalam:}{Native or Bilingual proficiency}{Chinese}{Beginner proficiency}
+\cvitem{Japanese}{Beginner proficiency}
+
+\section{Skills}
+\cvitem{Soft-skills}{Hardworking, Excellent Communication skills, Positive and ready-to-learn mindset}
 \cvitem{Languages}{Python, Java, JavaScript/TS, Rust, C}
 \cvitem{Libraries}{Numpy, Pandas, Matplotlib, ReactJS}
 \cvitem{Frameworks}{PyTorch, NextJS, Spring boot, ESP-IDF}
