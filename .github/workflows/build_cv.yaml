@@ -37,8 +37,8 @@ jobs:
         mv index.pdf R-Krishnan-${{matrix.cv_type}}-${{ github.run_id }}-${{ github.run_number }}.pdf
 
     - name: Release and Upload Assets
-        uses: softprops/action-gh-release@v1
-        # if: startsWith(github.ref, 'refs/tags/')
-        with:
-          files: |
-            R-Krishnan-${{matrix.cv_type}}-${{ github.run_id }}-${{ github.run_number }}.pdf
+      uses: softprops/action-gh-release@v1
+      # if: startsWith(github.ref, 'refs/tags/')
+      with:
+        files: |
+          R-Krishnan-${{matrix.cv_type}}-${{ github.run_id }}-${{ github.run_number }}.pdf
