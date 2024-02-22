@@ -1,4 +1,6 @@
 name: Build CV
+permissions:
+  contents: write
 
 on:
   push:
