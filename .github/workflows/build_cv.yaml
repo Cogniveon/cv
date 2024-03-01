@@ -52,7 +52,7 @@ jobs:
       - name: Download Artifacts
         uses: actions/download-artifact@v3
         with:
-          name: R-Krishnan-${{ matrix.cv_type }}-${{ github.run_id }}-${{ github.run_number }}
+          merge-multiple: true
   
       - name: Zip Artifacts
         run: zip -r artifacts.zip .
