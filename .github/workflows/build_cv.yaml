@@ -1,10 +1,10 @@
-name: Build CV
+name: Build
 permissions:
   contents: write
 
 on:
   push:
-    branches:
+    tags:
       - "**"
 
 jobs:
@@ -61,13 +61,14 @@ jobs:
           merge-multiple: true
       - name: Create Release
         id: create_release
-        uses: ncipollo/release-action@v1
+        uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          artifacts: "artifacts/*.pdf"
-          bodyFile: "job_description.md"
-          tag_name: ${{ github.ref }}-${{ env.timestamp }}
-          release_name: Release ${{ github.ref }} ${{ env.timestamp }}
+          fail_on_unmatched_files: true
+          files: |
+            artifacts/*.pdf
+          body_path: "job_description.md"
+          name: Release ${{ github.ref }}
           draft: false
           prerelease: false
