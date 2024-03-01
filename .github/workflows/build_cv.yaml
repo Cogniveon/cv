@@ -14,9 +14,6 @@ jobs:
       matrix:
         cv_type: [CV, CL, CVCL] # CV, Cover letter, CV with Cover letter
     
-    outputs:
-      out: ${{ steps.finalize_pdf.outputs.out }}
-
     steps:
     - uses: actions/checkout@v4
 
