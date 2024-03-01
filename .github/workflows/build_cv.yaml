@@ -44,7 +44,7 @@ jobs:
     #     mv index.pdf R-Krishnan-${{matrix.cv_type}}-${{ github.run_id }}-${{ github.run_number }}.pdf
     #     echo "out=$(readlink -f R-Krishnan-${{matrix.cv_type}}-${{ github.run_id }}-${{ github.run_number }}.pdf)" >> $GITHUB_OUTPUT
     - name: Upload Artifact
-      uses: actions/upload-artifact@master
+      uses: actions/upload-artifact@v4.3.1
       with:
         name: R-Krishnan-${{matrix.cv_type}}-${{ github.run_id }}-${{ github.run_number }}.pdf
         path: index.pdf
