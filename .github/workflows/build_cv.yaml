@@ -12,7 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        cv_type: [CV, CL, CVCL] # CV, Cover letter, CV with Cover letter
+        # CV, Cover letter, CV with Cover letter
+        cv_type: [CV, CL, CVCL]
     
     steps:
     - uses: actions/checkout@v4
@@ -35,32 +36,8 @@ jobs:
       with:
         root_file: index.tex
 
-    # - name: Finalize PDF
-    #   id: finalize_pdf
-    #   run: |
-    #     mv index.pdf R-Krishnan-${{matrix.cv_type}}-${{ github.run_id }}-${{ github.run_number }}.pdf
-    #     echo "out=$(readlink -f R-Krishnan-${{matrix.cv_type}}-${{ github.run_id }}-${{ github.run_number }}.pdf)" >> $GITHUB_OUTPUT
     - name: Upload Artifact
       uses: actions/upload-artifact@v4.3.1
       with:
         name: R-Krishnan-${{matrix.cv_type}}-${{ github.run_id }}-${{ github.run_number }}.pdf
         path: index.pdf
-
-  # release:
-  #   runs-on: ubuntu-latest
-  #   needs: build
-  #   env:
-  #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
-  #   steps:
-  #   - name: Create archive zip
-  #     run: >-
-  #       zip -r archive.zip R-Krishnan-CV-${{ github.run_id }}-${{ github.run_number }}.pdf \
-  #                           R-Krishnan-CL-${{ github.run_id }}-${{ github.run_number }}.pdf \
-  #                           R-Krishnan-CVCL-${{ github.run_id }}-${{ github.run_number }}.pdf
-  #   - name: Release
-  #     run: >-
-  #       gh release create ${{ github.ref_name }}
-  #         "archive.zip#rk_cvcl"
-  #         --generate-notes
-  #         --title "Version ${{ github.ref_name }}"
