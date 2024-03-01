@@ -43,7 +43,7 @@ jobs:
     
     - name: Rename File
       run: |
-        mv index.tex R-Krishnan-${{matrix.cv_type}}-${{ github.run_id }}-${{ github.run_number }}.pdf
+        mv index.tex R-Krishnan-${{matrix.cv_type}}-${{env.timestamp}}.pdf
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v4.3.1
