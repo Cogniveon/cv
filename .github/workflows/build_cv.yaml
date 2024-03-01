@@ -16,6 +16,19 @@ jobs:
       - name: Prepare artifacts folder
         run: |
           mkdir -p artifacts
+      
+      # - name: Switch build type to CVCL
+      #   run: |
+      #     sed -i '/^\\include{cover_letter}/s/^%//' index.tex
+      #     sed -i '/^%\\include{cv}/s/^%//' index.tex
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: index.tex
+      - name: Move File
+        run: |
+          mv index.pdf artifacts/R-Krishnan-CVCL-${{ github.run_id }}-${{ github.run_number }}.pdf
+      
       - name: Switch build type to CV
         run: |
           sed -i '/^\\include{cover_letter}/s/^/%/' index.tex
@@ -40,17 +53,6 @@ jobs:
         run: |
           mv index.pdf artifacts/R-Krishnan-CL-${{ github.run_id }}-${{ github.run_number }}.pdf
 
-      - name: Switch build type to CVCL
-        run: |
-          sed -i '/^\\include{cover_letter}/s/^%//' index.tex
-          sed -i '/^%\\include{cv}/s/^%//' index.tex
-      - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v2
-        with:
-          root_file: index.tex
-      - name: Move File
-        run: |
-          mv index.pdf artifacts/R-Krishnan-CVCL-${{ github.run_id }}-${{ github.run_number }}.pdf
 
       - name: Create Release
         id: create_release
