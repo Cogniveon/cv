@@ -43,8 +43,8 @@ jobs:
 
       - name: Switch build type to CL
         run: |
-          sed -i '/^\\include{cover_letter}/s/^%//' index.tex
-          sed -i '/^%\\include{cv}/s/^/%/' index.tex
+          sed -i '/^%\\include{cover_letter}/s/^%//' index.tex
+          sed -i '/^\\include{cv}/s/^/%/' index.tex
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
